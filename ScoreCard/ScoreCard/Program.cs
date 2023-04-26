@@ -55,14 +55,14 @@
 
         public void Task1()
         {
-            //(1.a)
+            
             Console.WriteLine("Total Marks Acheived by each student:");
             foreach (Student student in students)
             {
                 Console.WriteLine($"Total Marks of {student.Name} is: {student.sum}");
             }
             
-            //(1.b)
+            
             int topScore = 0;
             Student topScorer = null;
             foreach (Student student in students)
@@ -76,7 +76,7 @@
             Console.WriteLine($"Top Scorer: {topScorer.Name} (Roll Number: {topScorer.RollNo}), Total Marks: {topScorer.sum}");
             
 
-            //(1.c)
+            
             int totalMathMarks = 0;
             int totalScienceMarks = 0;
             int totalEnglishMarks = 0;
@@ -100,7 +100,7 @@
 
             Console.WriteLine($"Average Marks of Each Subject:  Maths: {averageMathMarks}  Science: {averageScienceMarks}  English: {averageEnglishMarks}  Language: {averageLanguageMarks} Social: {averageSocialMarks}");
             
-            //(1.d)
+           
             int pass = 0;
             int fail = 0;
             Console.WriteLine("Result of Each Student(pass/fail):");
@@ -134,7 +134,9 @@
                 else
                 {
                     fail++;
+                    Console.WriteLine($"The students who need to repeat their examination student name:{student.Name},student rollno: {student.RollNo} ");
                 }
+                
             }
 
             Console.WriteLine($"Number of students they need to repeat the examination are: {fail}");
@@ -142,7 +144,7 @@
 
         public void Task3()
         {
-            string Grade = "A";
+            string Grade = " ";
             foreach (Student student in students)
             {
                 double studentAverage = 0;
@@ -190,7 +192,7 @@
                     Console.WriteLine($"Language Marks: {student.Language}");
                     Console.WriteLine($"Social Marks: {student.SST}");
                     Console.WriteLine($"Total Marks Obtained: {student.sum}");
-                    string Grade = "A";
+                    string Grade = " ";
                     double studentAverage = 0;
                     studentAverage = student.sum / 5;
                     if (studentAverage >= 95)
@@ -218,7 +220,7 @@
                         Grade = "F";
                     }
 
-                    Console.WriteLine($"Grade Achived {Grade}");
+                    Console.WriteLine($"Grade Achived for{student.Name} is{Grade}");
                 }
 
             }
